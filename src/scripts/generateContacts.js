@@ -16,9 +16,9 @@ export const generateContacts = async (number) => {
 
     await fs.writeFile(PATH_DB, JSON.stringify(contacts, null, 2));
 
-    console.log(`Успішно додано ${number} нових контактів у файл ${PATH_DB}`);
+    console.log(`Successfully added to ${number} new contacts to the file ${PATH_DB}`);
   } catch (error) {
-    console.error('Помилка під час зчитування або запису файлу:', error);
+    console.error('Error reading or writing file:', error);
   }
 };
 

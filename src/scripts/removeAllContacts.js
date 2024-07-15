@@ -8,11 +8,11 @@ export const removeAllContacts = async () => {
     contacts.splice(0, contacts.length);
     await fs.writeFile(PATH_DB, JSON.stringify(contacts, null, 2));
     console.log(
-      `Контакти успішно видалені з масиву у файлі ${PATH_DB} `,
+      `Contacts successfully deleted from the array in a file ${PATH_DB} `,
       contacts,
     );
   } catch (error) {
-    console.error('Помилка під час видалення контактів з масиву:', error);
+    console.error('Error while deleting contacts from the array:', error);
   }
 };
 

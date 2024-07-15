@@ -12,9 +12,9 @@ export const addOneContact = async () => {
     contacts.push(createFakeContact());
     await fs.writeFile(PATH_DB, JSON.stringify(contacts, null, 2));
 
-    console.log(`Успішно додано  контакт у файл ${PATH_DB}`);
+    console.log(`Successfully added a contact to the file ${PATH_DB}`);
   } catch (error) {
-    console.error('Помилка під час зчитування або запису файлу:', error);
+    console.error('Error reading of writing file:', error);
   }
 };
 addOneContact();
